@@ -1,0 +1,14 @@
+{
+  "name": "trabajou",
+  "version": "0.0.1",
+  "authors": [
+    "manuelastudillo <clerigo.morpheus@gmail.com>"
+  ],
+  "description": "Paquetes del fronted para el proyecto",
+  "license": "MIT",
+  "homepage": "trabajo.app",
+  "dependencies": {
+    "bootstrap": "~3.3.5",
+    "bootstrap-material-design": "~0.3.0"
+  }
+}
