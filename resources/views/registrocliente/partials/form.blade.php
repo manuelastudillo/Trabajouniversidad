@@ -19,12 +19,12 @@
 
     <div class="form-group">
 
-      {!!Form::text('nombres',null,['class'=>'form-control floating-label','placeholder'=>'Nombres:'])!!}
+      {!!Form::text('direccion',null,['class'=>'form-control floating-label','placeholder'=>'Dirección:'])!!}
        </div>
 
     <div class="form-group">
   
-      {!!Form::text('apellidos',null,['class'=>'form-control floating-label','placeholder'=>'Apellidos:'])!!}
+      {!!Form::text('Telefono',null,['class'=>'form-control floating-label','placeholder'=>'Telefono:'])!!}
        </div>
        
 </div> {{--/.col-sn-6--}}
