@@ -5,7 +5,7 @@ use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
 
-class RegistroClienteController extends Controller {
+class RegistroProveedorController extends Controller {
 
 	/**
 	 * Display a listing of the resource.
@@ -14,7 +14,7 @@ class RegistroClienteController extends Controller {
 	 */
 	public function index()
 	{
-		return view('welcome');
+		//
 	}
 
 	/**
@@ -24,7 +24,7 @@ class RegistroClienteController extends Controller {
 	 */
 	public function create()
 	{
-		return view('registrocliente.create');	
+	return view('registroproveedor.create');	
 	}
 
 	/**

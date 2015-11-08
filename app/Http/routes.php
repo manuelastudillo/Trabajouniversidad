@@ -24,4 +24,4 @@ Route::get('/vista-inicio', ['as' => 'vista.inicio', 'uses' => 'NombreControler@
 
 resource('ingreso','IngresoController');
 resource('registrocliente','RegistroClienteController');
-resource('registroprovedor','RegistroProvedorController');
+resource('registroproveedor','RegistroProveedorController');
