@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Eloquent\Model;
 
-class periodos extends Model {
+class Producto extends Model {
 
 	//
 

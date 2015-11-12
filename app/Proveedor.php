@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Eloquent\Model;
 
-class asignaturas extends Model {
+class Proveedor extends Model {
 
 	//
 

@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Eloquent\Model;
 
-class facultades extends Model {
+class Cliente extends Model {
 
 	//
 

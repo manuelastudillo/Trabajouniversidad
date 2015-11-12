@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Eloquent\Model;
 
-class horarios extends Model {
+class Cargo extends Model {
 
 	//
 
