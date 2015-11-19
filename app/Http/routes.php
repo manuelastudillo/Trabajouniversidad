@@ -28,3 +28,7 @@ resource('registroproveedor','RegistroProveedorController');
 resource('registropersonal','RegistroPersonalController');
 resource('registroproducto','RegistroProductoController');
 resource('venta','VentaController');
+
+Route::get('prueba', function(){
+	return view('layouts.layout');
+});

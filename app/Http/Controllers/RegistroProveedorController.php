@@ -2,7 +2,7 @@
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-
+use App\Proveedor;
 use Illuminate\Http\Request;
 
 class RegistroProveedorController extends Controller {
@@ -14,7 +14,9 @@ class RegistroProveedorController extends Controller {
 	 */
 	public function index()
 	{
-		//
+		$proveedors = Proveedor::orderBy('nombre','asc')->paginate(15);
+		
+		return view('registroproveedor.index')->with('proveedors',$proveedors);
 	}
 
 	/**
@@ -32,9 +34,25 @@ class RegistroProveedorController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function store()
+	public function store(Request $request)
 	{
-		//
+		//dd($request->all());
+		$proveedor = new Proveedor();
+	    $proveedor->nombre = $request->input('nombre');
+        $proveedor->representante = $request->input('representante');
+        $proveedor->rut = $request->input('rut');
+	    $proveedor->direccion = $request->input('direccion');
+        $proveedor->telefono = $request->input('telefono');
+        $proveedor->web = $request->input('web');
+	    $proveedor->email = $request->input('email');
+
+		//$personal->nombre
+		//dd($request->all());
+		//$dato=$request->only()
+		//$personal = Personal::create($request->all());
+	 	$proveedor->save();
+		dd("creado");
+
 	}
 
 	/**

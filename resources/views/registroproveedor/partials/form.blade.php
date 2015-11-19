@@ -2,14 +2,10 @@
 
 
 
-    <div class="form-group">
-
-      {!!Form::text('rutproveedor',null,['class'=> 'form-control floating-label','placeholder'=>'Rut Proevedor:'])!!}
-      </div>
 
     <div class="form-group">
 
-      {!!Form::text('nombres',null,['class'=>'form-control floating-label','placeholder'=>'Nombre:'])!!}
+      {!!Form::text('nombre',null,['class'=>'form-control floating-label','placeholder'=>'Nombre:'])!!}
        </div>
 
     <div class="form-group">
@@ -17,20 +13,25 @@
       {!!Form::text('representante',null,['class'=>'form-control floating-label','placeholder'=>'Representante:'])!!}
        </div>
 
+     <div class="form-group">
+
+      {!!Form::text('rut',null,['class'=> 'form-control floating-label','placeholder'=>'Rut Proevedor:'])!!}
+      </div>
+
     <div class="form-group">
 
-      {!!Form::text('Dirección',null,['class'=>'form-control floating-label','placeholder'=>'Dirección:'])!!}
+      {!!Form::text('direccion',null,['class'=>'form-control floating-label','placeholder'=>'Dirección:'])!!}
        </div>
 
     <div class="form-group">
   
-      {!!Form::text('Telefono',null,['class'=>'form-control floating-label','placeholder'=>'Telefono:'])!!}
+      {!!Form::text('telefono',null,['class'=>'form-control floating-label','placeholder'=>'Telefono:'])!!}
        </div>
        
 
     <div class="form-group">
   
-      {!!Form::text('web',null,['class'=>'form-control floating-label','placeholder'=>'SitioWeb:'])!!}
+      {!!Form::text('web',null,['class'=>'form-control floating-label','placeholder'=>'Sitio Web:'])!!}
        </div>
 
     <div class="form-group">

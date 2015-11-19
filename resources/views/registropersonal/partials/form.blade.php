@@ -9,58 +9,65 @@
 
     <div class="form-group">
 
-      {!!Form::text('nombres',null,['class'=>'form-control floating-label','placeholder'=>'Nombres:'])!!}
+      {!!Form::text('nombre',null,['class'=>'form-control floating-label','placeholder'=>'Nombres:'])!!}
        </div>
 
     <div class="form-group">
   
-      {!!Form::text('apellidos',null,['class'=>'form-control floating-label','placeholder'=>'Apellidos:'])!!}
+      {!!Form::text('apellido',null,['class'=>'form-control floating-label','placeholder'=>'Apellidos:'])!!}
        </div>
 
 
     <div class="form-group">
   
-      {!!Form::text('sexo',null,['class'=>'form-control floating-label','placeholder'=>'Telefono:'])!!}
+      {!!Form::text('sexo',null,['class'=>'form-control floating-label','placeholder'=>'Sexo:'])!!}
        </div>
        
-   
 
     <div class="form-group">
   
-      {!!Form::text('estadocivil',null,['class'=>'form-control floating-label','placeholder'=>'Estado civil:'])!!}
-       </div>
-       
-    <div class="form-group">
-
-      {!!Form::text('fechadenacimiento',null,['class'=>'form-control floating-label','placeholder'=>'Fecha de nacimiento:'])!!}
-       </div>
-
-    <div class="form-group">
-  
-      {!!Form::text('usuariomail',null,['class'=>'form-control floating-label','placeholder'=>'Usuario Email:'])!!}
+      {!!Form::text('estado_civil',null,['class'=>'form-control floating-label','placeholder'=>'Estado civil:'])!!}
        </div>
        
     <div class="form-group">
 
-      {!!Form::text('contraseña',null,['class'=>'form-control floating-label','placeholder'=>'Contraseña:'])!!}
+      {!!Form::text('fecha_nacimiento',null,['class'=>'form-control floating-label','placeholder'=>'Fecha de nacimiento:'])!!}
        </div>
+
+
+    <div class="form-group">
+  
+      {!!Form::text('usuario_mail',null,['class'=>'form-control floating-label','placeholder'=>'Usuario Email:'])!!}
+       </div>
+       
+
+    <div class="form-group">
+
+      {!!Form::text('password',null,['class'=>'form-control floating-label','placeholder'=>'Contraseña:'])!!}
+       </div>
+
 
     <div class="form-group">
   
       {!!Form::text('sueldo',null,['class'=>'form-control floating-label','placeholder'=>'Sueldo:'])!!}
        </div>
        
+
      <div class="form-group">
   
       {!!Form::text('telefono',null,['class'=>'form-control floating-label','placeholder'=>'Teléfono:'])!!}
        </div>
+
 
      <div class="form-group">
   
       {!!Form::text('direccion',null,['class'=>'form-control floating-label','placeholder'=>'Dirección:'])!!}
        </div>
        
+
        <div class="form-group">
+
+
 
       {!!Form::text('cargo',null,['class'=>'form-control floating-label','placeholder'=>'Cargo:'])!!}
        </div> 

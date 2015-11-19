@@ -2,8 +2,9 @@
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-
+use App\Cliente;
 use Illuminate\Http\Request;
+use DB;
 
 class RegistroClienteController extends Controller {
 
@@ -14,17 +15,24 @@ class RegistroClienteController extends Controller {
 	 */
 	public function index()
 	{
-		return view('welcome');
+
+		$clientes = Cliente::orderBy('nombre','asc')->paginate(15);
+		
+		return view('registrocliente.index')->with('clientes',$clientes);
+
+		//$clientes = Cliente::all()->paginate(15);
+		//$clientes = DB::table('clientes')->paginate(10);
+		//return view('registrocliente.index')->with('clientes',$clientes);
 	}
 
 	/**
 	 * Show the form for creating a new resource.
-	 *
+	 *tercero.index',compact()
 	 * @return Response
 	 */
 	public function create()
 	{
-		return view('registrocliente.create');	
+	return view('registrocliente.create');	
 	}
 
 	/**
@@ -32,9 +40,22 @@ class RegistroClienteController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function store()
+	public function store(Request $request)
 	{
-		//
+		//dd($request->all());
+		$cliente = new Cliente();
+		$cliente->rut =  $request->input('rut');
+	    $cliente->nombre = $request->input('nombre');
+        $cliente->apellido = $request->input('apellido');
+	    $cliente->direccion = $request->input('direccion');
+
+		//$personal->nombre
+		//dd($request->all());
+		//$dato=$request->only()
+		//$personal = Personal::create($request->all());
+		$cliente->save();
+		dd("creado");
+
 	}
 
 	/**

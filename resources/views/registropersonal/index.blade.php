@@ -1,42 +1,55 @@
 @extends('app')
 
+@section('content')
+
+       <h1> personal registrados </h1>
 
      <table class="table table-bordered table-striped">
-          <thead>
-             <tr>
-                  <tr>#</tr>
-                  <tr>Rut</tr>
-                  <tr>Nombre</tr>
-                  <tr>Apellidos</tr>
-                  <tr>Fecha_de_nacimiento</tr>
-                  <tr>Usuario_Email</tr>
-                  <tr>Contraseña</tr>
-                  <tr>Sueldo</tr>
-                  <tr>Telefono</tr>
-                  <tr>Direccion</tr>
-                  <tr>Cargo</tr>
+
+ <thead>
+     <tr>
+
+        <th>ID</th>
+        <th>Rut</th>
+        <th>Nombres</th>
+        <th>Apellidos</th>
+        <th>Sexo</th>
+        <th>Estado_civil</th>
+        <th>Fecha_de_nacimiento</th>
+        <th>Usuario_Email</th>
+        <th>Contraseña</th>
+        <th>Sueldo</th>
+        <th>Telefono</th>
+        <th>Direccion</th>
+        <th>Cargo</th>
      </tr>
-        </thead>
-        <tbody>
+  </thead>
+  <tbody>
+
+
             @foreach($personals as $personal)
-                <tr>
-                <td>={{$registropersonal->id}}</td>
-                <td>={{$registropersonal->rut}}</td>
-                <td>={{$registropersonal->nombre}}</td>
-                <td>={{$registropersonal->apellido}}</td>
-                <td>={{$registropersonal->sexo}}</td>
-                <td>={{$registropersonal->estado_civil}}</td>
-                <td>={{$registropersonal->fecha_nacimiento}}</td>
-                <td>={{$registropersonal->usuario_mail}}</td>
-                <td>={{$registropersonal->password}}</td>
-                <td>={{$registropersonal->sueldo}}</td>
-                <td>={{$registropersonal->telefono}}</td>
-                <td>={{$registropersonal->direccion}}</td>
-            </tr>
+            <tr>
+                <td>{{$personal->id}}</td>
+                <td>{{$personal->rut}}</td>
+                <td>{{$personal->nombre}}</td>
+                <td>{{$personal->apellido}}</td>
+                <td>{{$personal->sexo}}</td>
+                <td>{{$personal->estado_civil}}</td>
+                <td>{{$personal->fecha_nacimiento}}</td>
+                <td>{{$personal->usuario_mail}}</td>
+                <td>{{$personal->password}}</td>
+                <td>{{$personal->sueldo}}</td>
+                <td>{{$personal->telefono}}</td>
+                <td>{{$personal->direccion}}</td>
+                <td>{{$personal->cargo}}</td>
+
+          </tr>
+           @endforeach
             </tbody>
 
      </table>
 
+    {!! $personals->render() !!}
 
 
   @endsection

@@ -2,7 +2,7 @@
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-
+use App\Personal;
 use Illuminate\Http\Request;
 
 class RegistroPersonalController extends Controller {
@@ -14,9 +14,10 @@ class RegistroPersonalController extends Controller {
 	 */
 	public function index()
 	{
-		//
-	}
-
+		$personals = Personal::orderBy('nombre','asc')->paginate(15);
+		
+		return view('registropersonal.index')->with('personals',$personals);
+}
 	/**
 	 * Show the form for creating a new resource.
 	 *
@@ -32,9 +33,31 @@ class RegistroPersonalController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function store()
+
+	public function store(Request $request)
 	{
-		//
+		//dd($request->all());
+		$personal = new Personal();
+		$personal->rut =  $request->input('rut');
+	    $personal->nombre = $request->input('nombre');
+        $personal->apellido = $request->input('apellido');
+        $personal->sexo = $request->input('sexo');
+	    $personal->estado_civil = $request->input('estado_civil');
+        $personal->fecha_nacimiento = $request->input('fecha_nacimiento');
+        $personal->usuario_mail = $request->input('usuario_mail');
+	    $personal->password = $request->input('password');
+        $personal->sueldo = $request->input('sueldo');
+        $personal->telefono = $request->input('telefono');
+	    $personal->direccion = $request->input('direccion');
+        $personal->cargo = $request->input('cargo');
+
+		//$personal->nombre
+		//dd($request->all());
+		//$dato=$request->only()
+		//$personal = Personal::create($request->all());
+		$personal->save();
+		dd("creado");
+
 	}
 
 	/**
