@@ -11,7 +11,7 @@ class CreateProveedorRequest extends Request {
 	 */
 	public function authorize()
 	{
-		return false;
+		return true;
 	}
 
 	/**
@@ -22,7 +22,15 @@ class CreateProveedorRequest extends Request {
 	public function rules()
 	{
 		return [
-			//
+			
+			'nombre'=> 'required|min:3',
+			'representante'=> 'required|min:3',
+			'rut'=> 'required|min:7|unique:proveedors,rut',
+			'direccion' => 'required|min:3',
+			'telefono'=> 'required',
+			'web'=> 'required',
+			'email'=> 'required',
+				
 		];
 	}
 

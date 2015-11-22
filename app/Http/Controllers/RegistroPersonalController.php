@@ -4,7 +4,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Personal;
 use Illuminate\Http\Request;
-
+use App\Http\Requests\CreatePersonalRequest;
 class RegistroPersonalController extends Controller {
 
 	/**
@@ -34,7 +34,7 @@ class RegistroPersonalController extends Controller {
 	 * @return Response
 	 */
 
-	public function store(Request $request)
+	public function store(CreatePersonalRequest $request)
 	{
 		//dd($request->all());
 		$personal = new Personal();

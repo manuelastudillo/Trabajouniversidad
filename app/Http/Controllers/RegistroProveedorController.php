@@ -4,6 +4,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Proveedor;
 use Illuminate\Http\Request;
+use App\Http\Requests\CreateProveedorRequest;
 
 class RegistroProveedorController extends Controller {
 
@@ -34,7 +35,7 @@ class RegistroProveedorController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function store(Request $request)
+	public function store(CreateProveedorRequest $request)
 	{
 		//dd($request->all());
 		$proveedor = new Proveedor();
