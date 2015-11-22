@@ -97,7 +97,7 @@
 			</nav>
 			<div class="jumbotron">
 				<h2>
-					Hello, world!
+					weqwewqe!
 				</h2>
 				<p>
 					This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique.
@@ -133,7 +133,7 @@
 		</div>
 		<div class="col-md-4">
 			<h2>
-				Heading
+				pene
 			</h2>
 			<p>
 				Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.

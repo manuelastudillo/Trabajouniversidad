@@ -5,7 +5,7 @@ use App\Http\Controllers\Controller;
 use App\Cliente;
 use Illuminate\Http\Request;
 use DB;
-
+use App\Http\Requests\CreateClienteRequest;
 class RegistroClienteController extends Controller {
 
 	/**
@@ -40,8 +40,13 @@ class RegistroClienteController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function store(Request $request)
+	public function store(CreateClienteRequest $request)
 	{
+      // 		$clientes = Cliente::create($request->all());
+
+      //  return redirect('registrocliente');
+      
+
 		//dd($request->all());
 		$cliente = new Cliente();
 		$cliente->rut =  $request->input('rut');
