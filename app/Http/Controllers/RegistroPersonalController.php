@@ -37,6 +37,7 @@ class RegistroPersonalController extends Controller {
 	public function store(CreatePersonalRequest $request)
 	{
 		//dd($request->all());
+	//	dd($request->all());
 		$personal = new Personal();
 		$personal->rut =  $request->input('rut');
 	    $personal->nombre = $request->input('nombre');

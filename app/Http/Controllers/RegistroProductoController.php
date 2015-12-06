@@ -2,8 +2,9 @@
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-
+use App\Producto;
 use Illuminate\Http\Request;
+use App\Http\Requests\CreateProductoRequest;
 
 class RegistroProductoController extends Controller {
 
@@ -14,7 +15,9 @@ class RegistroProductoController extends Controller {
 	 */
 	public function index()
 	{
-		//
+		$productos = Producto::orderBy('nombre','asc')->paginate(15);
+		
+		return view('registroproducto.index')->with('productos',$productos);
 	}
 
 	/**
@@ -32,9 +35,29 @@ class RegistroProductoController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function store()
+	public function store(CreateProductoRequest $request)
 	{
-		//
+	//dd($request->all());
+		$producto = new Producto();
+	    $producto->nombre = $request->input('nombre');
+        $producto->principio_activo = $request->input('principio_activo');
+        $producto->laboratorio = $request->input('laboratorio');
+	    $producto->linea = $request->input('linea');
+        $producto->codigo_barras = $request->input('codigo_barras');
+        $producto->categoria = $request->input('categoria');
+	    $producto->comision = $request->input('comision');
+	    $producto->stock = $request->input('stock');
+        $producto->stockminimo = $request->input('stockminimo');
+	    $producto->precio_compra = $request->input('precio_compra');
+        $producto->descuento = $request->input('descuento');
+        $producto->proveedor_id = $request->input('proveedor_id');
+
+		//$personal->nombre
+		//dd($request->all());
+		//$dato=$request->only()
+		//$personal = Personal::create($request->all());
+	 	$producto->save();
+		dd("creado");
 	}
 
 	/**

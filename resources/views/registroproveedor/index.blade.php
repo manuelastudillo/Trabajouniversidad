@@ -17,8 +17,7 @@
         <th>Telefono</th>
         <th>Sitio Web</th>
         <th>Email</th>
-
-
+       <th></th>
      </tr>
   </thead>
   <tbody>
@@ -34,7 +33,7 @@
                 <td>{{$proveedor->telefono}}</td>
                 <td>{{$proveedor->web}}</td>
                 <td>{{$proveedor->email}}</td>
-
+                <td><input type="button" id="{{$proveedor->id}}" value="Editar" onclick="editarProveedor(this.id);"></td>
           </tr>
            @endforeach
             </tbody>

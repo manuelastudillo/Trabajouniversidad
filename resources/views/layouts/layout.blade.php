@@ -4,149 +4,158 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CRUD Template</title>
 
-    <title>Bootstrap 3, from LayoutIt!</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 
-    <meta name="description" content="Source code generated using layoutit.com">
-    <meta name="author" content="LayoutIt!">
-
-    <link href="{{ asset('layouts/css/bootstrap.min.css')}}" rel="stylesheet">
-    <link href="{{ asset('layouts/css/styles.css')}}" rel="stylesheet">
-
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
   </head>
   <body>
+  <p><br/></p>
+    <div class="container">
+            <!-- Nav tabs -->
+        <ul class="nav nav-tabs" role="tablist">
+            <li class="active"><a href="#daftar" role="tab" data-toggle="tab">Daftar</a></li>
+            <li><a href="#tambah" role="tab" data-toggle="tab">Tambah</a></li>
+        </ul>
 
-    <div class="container-fluid">
-	<div class="row">
-		<div class="col-md-12">
-			<nav class="navbar navbar-default" role="navigation">
-				<div class="navbar-header">
-					 
-					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-						 <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
-					</button> <a class="navbar-brand" href="#">Brand</a>
-				</div>
-				
-				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-					<ul class="nav navbar-nav">
-						<li class="active">
-							<a href="#">Link</a>
-						</li>
-						<li>
-							<a href="#">Link</a>
-						</li>
-						<li class="dropdown">
-							 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown<strong class="caret"></strong></a>
-							<ul class="dropdown-menu">
-								<li>
-									<a href="#">Action</a>
-								</li>
-								<li>
-									<a href="#">Another action</a>
-								</li>
-								<li>
-									<a href="#">Something else here</a>
-								</li>
-								<li class="divider">
-								</li>
-								<li>
-									<a href="#">Separated link</a>
-								</li>
-								<li class="divider">
-								</li>
-								<li>
-									<a href="#">One more separated link</a>
-								</li>
-							</ul>
-						</li>
-					</ul>
-					<form class="navbar-form navbar-left" role="search">
-						<div class="form-group">
-							<input type="text" class="form-control">
-						</div> 
-						<button type="submit" class="btn btn-default">
-							Submit
-						</button>
-					</form>
-					<ul class="nav navbar-nav navbar-right">
-						<li>
-							<a href="#">Link</a>
-						</li>
-						<li class="dropdown">
-							 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown<strong class="caret"></strong></a>
-							<ul class="dropdown-menu">
-								<li>
-									<a href="#">Action</a>
-								</li>
-								<li>
-									<a href="#">Another action</a>
-								</li>
-								<li>
-									<a href="#">Something else here</a>
-								</li>
-								<li class="divider">
-								</li>
-								<li>
-									<a href="#">Separated link</a>
-								</li>
-							</ul>
-						</li>
-					</ul>
-				</div>
-				
-			</nav>
-			<div class="jumbotron">
-				<h2>
-					weqwewqe!
-				</h2>
-				<p>
-					This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique.
-				</p>
-				<p>
-					<a class="btn btn-primary btn-large" href="#">Learn more</a>
-				</p>
-			</div>
-		</div>
-	</div>
-	<div class="row">
-		<div class="col-md-4">
-			<h2>
-				Heading
-			</h2>
-			<p>
-				Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-			</p>
-			<p>
-				<a class="btn" href="#">View details »</a>
-			</p>
-		</div>
-		<div class="col-md-4">
-			<h2>
-				Heading
-			</h2>
-			<p>
-				Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-			</p>
-			<p>
-				<a class="btn" href="#">View details »</a>
-			</p>
-		</div>
-		<div class="col-md-4">
-			<h2>
-				pene
-			</h2>
-			<p>
-				Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-			</p>
-			<p>
-				<a class="btn" href="#">View details »</a>
-			</p>
-		</div>
-	</div>
-</div>
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <div class="tab-pane active" id="daftar">
+                <br/>
+                <p><button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span> Tambah Data</button></p>
+                <br/>
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Nama</th>
+                                    <th>Jenis Kelamin</th>
+                                    <th>Tanggal Lahir</th>
+                                    <th>Alamat</th>
+                                    <th>Aksi</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>0998877</td>
+                                    <td>T Ghazali</td>
+                                    <td>Laki-laki</td>
+                                    <td>1992-11-12</td>
+                                    <td>Pidie, Aceh, Indonesia</td>
+                                    <td>
+                                        <a href=""><span class="glyphicon glyphicon-edit"></span> Ubah</a>
+                                        <a href=""><span class="glyphicon glyphicon-trash"></span> Hapus</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>0998877</td>
+                                    <td>T Ghazali</td>
+                                    <td>Laki-laki</td>
+                                    <td>1992-11-12</td>
+                                    <td>Pidie, Aceh, Indonesia</td>
+                                    <td>
+                                        <a href=""><span class="glyphicon glyphicon-edit"></span> Ubah</a>
+                                        <a href=""><span class="glyphicon glyphicon-trash"></span> Hapus</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>0998877</td>
+                                    <td>T Ghazali</td>
+                                    <td>Laki-laki</td>
+                                    <td>1992-11-12</td>
+                                    <td>Pidie, Aceh, Indonesia</td>
+                                    <td>
+                                        <a href=""><span class="glyphicon glyphicon-edit"></span> Ubah</a>
+                                        <a href=""><span class="glyphicon glyphicon-trash"></span> Hapus</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>0998877</td>
+                                    <td>T Ghazali</td>
+                                    <td>Laki-laki</td>
+                                    <td>1992-11-12</td>
+                                    <td>Pidie, Aceh, Indonesia</td>
+                                    <td>
+                                        <a href=""><span class="glyphicon glyphicon-edit"></span> Ubah</a>
+                                        <a href=""><span class="glyphicon glyphicon-trash"></span> Hapus</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>0998877</td>
+                                    <td>T Ghazali</td>
+                                    <td>Laki-laki</td>
+                                    <td>1992-11-12</td>
+                                    <td>Pidie, Aceh, Indonesia</td>
+                                    <td>
+                                        <a href=""><span class="glyphicon glyphicon-edit"></span> Ubah</a>
+                                        <a href=""><span class="glyphicon glyphicon-trash"></span> Hapus</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                    </table>
+                </div>
+                <ul class="pagination">
+                    <li class="disabled"><a href="#">&laquo;</a></li>
+                    <li class="active"><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><a href="#">&raquo;</a></li>
+                </ul>
+            </div>
+            <div class="tab-pane" id="tambah">
+                <br/>
+                <div class="alert alert-success" role="alert">Berhasil <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button></div>
+                <div class="alert alert-warning" role="alert">Ada sedikit masalah <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button></div>
+                <div class="alert alert-danger" role="alert">Error, coba lagi <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button></div>
+                <br/>
+                <form role="form">
+                    <div class="form-group">
+                            <label for="exampleInputEmail1">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                    </div>
+                    <div class="form-group">
+                            <label for="exampleInputPassword1">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    </div>
+                    <div class="form-group">
+                            <label for="exampleInputtxt1">Text</label>
+                            <input type="text" class="form-control" id="exampleInputtxt1" placeholder="Text">
+                    </div>
+                    <div class="form-group">
+                            <label for="exampleInputurl1">Site</label>
+                            <input type="url" class="form-control" id="exampleInputurl1" placeholder="http://">
+                    </div>
+                    <div class="form-group">
+                            <label for="exampleInputFile">File input</label>
+                            <input type="file" id="exampleInputFile">
+                            <p class="help-block">Example block-level help text here.</p>
+                    </div>
+                    <div class="checkbox">
+                            <label>
+                            <input type="checkbox"> Check me out
+                            </label>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="button" class="btn btn-success">Back</button>
+                </form>
+                <br/>
+            </div>
+        </div>
+    </div>
 
-    <script src="layouts/js/jquery.min.js"></script>
-    <script src="layouts/js/bootstrap.min.js"></script>
-    <script src="layouts/js/scripts.js"></script>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
   </body>
 </html>

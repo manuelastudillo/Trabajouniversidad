@@ -2,7 +2,7 @@
 
 @section('content')
 
-       <h1> personal registrados </h1>
+       <h1> Personal Registrados </h1>
 
      <table class="table table-bordered table-striped">
 
@@ -22,10 +22,10 @@
         <th>Telefono</th>
         <th>Direccion</th>
         <th>Cargo</th>
+       <th></th>
      </tr>
   </thead>
   <tbody>
-
 
             @foreach($personals as $personal)
             <tr>
@@ -42,14 +42,11 @@
                 <td>{{$personal->telefono}}</td>
                 <td>{{$personal->direccion}}</td>
                 <td>{{$personal->cargo}}</td>
-
-          </tr>
-           @endforeach
-            </tbody>
-
-     </table>
-
+                <td><input type="button" id="{{$personal->id}}" value="Editar" onclick="editarPersonal(this.id);"></td>
+        </tr>
+        @endforeach
+        </tbody>
+    </table>
     {!! $personals->render() !!}
 
-
-  @endsection
+@endsection

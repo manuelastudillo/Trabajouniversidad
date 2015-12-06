@@ -28,22 +28,28 @@
 
 
 
-    <div class="form-group">
-        {!! Form::text('sexo', null, ['class' => 'form-control floating-label', 'placeholder' => 'Sexo:', 'required']) !!}
-        @if($errors->has('sexo'))
-            <p class="text-danger">{{ $errors->first('sexo') }}</p>
-        @endif
-    </div>
-
-       
-
-
-    <div class="form-group">
-        {!! Form::text('estado_civil', null, ['class' => 'form-control floating-label', 'placeholder' => 'Estado Civil:', 'required']) !!}
+     <div class="form-group">
+        {!! Form::select('sexo',
+            ['masculino' => 'Masculino', 'femenino' => 'Femenino'],
+            null,
+            ['class' => 'form-control floating-label', 'placeholder' => 'Estado_Civil:', 'required']) !!}
         @if($errors->has('estado_civil'))
             <p class="text-danger">{{ $errors->first('estado_civil') }}</p>
         @endif
     </div>
+       
+
+
+     <div class="form-group">
+        {!! Form::select('estado_civil',
+            ['soltero(a)' => 'Soltero(a)', 'casado(a)' => 'Casado(a)','viudo(a)' => 'Viudo(a)', 'separado(a)' => 'Separado(a)'],
+            null,
+            ['class' => 'form-control floating-label', 'placeholder' => 'Estado_Civil:', 'required']) !!}
+        @if($errors->has('estado_civil'))
+            <p class="text-danger">{{ $errors->first('estado_civil') }}</p>
+        @endif
+    </div>
+
 
        
 
@@ -110,10 +116,14 @@
 
 
     <div class="form-group">
-        {!! Form::text('cargo', null, ['class' => 'form-control floating-label', 'placeholder' => 'Cargo:', 'required']) !!}
+        {!! Form::select('cargo',
+            ['personal' => 'Personal', 'administrador' => 'Administrador'],
+            null,
+            ['class' => 'form-control floating-label', 'placeholder' => 'Rol:', 'required']) !!}
         @if($errors->has('cargo'))
             <p class="text-danger">{{ $errors->first('cargo') }}</p>
         @endif
     </div>
+
 
 </div> {{--/.col-sn-6--}}

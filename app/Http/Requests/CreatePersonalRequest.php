@@ -22,7 +22,7 @@ class CreatePersonalRequest extends Request {
 	public function rules()
 	{
 		return [
-			'rut'=> 'required|min:7|unique:clientes,rut',
+			'rut'=> 'required|min:7|max:9|unique:clientes,rut',
 			'nombre'=> 'required|min:3',
 			'apellido'=> 'required|min:3',
 			'sexo' => 'required|min:3',

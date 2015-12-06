@@ -14,6 +14,7 @@
        <th>Nombre</th>
        <th>Apellido</th>
        <th>Direccion</th>
+       <th></th>
      </tr>
   </thead>
   <tbody>
@@ -26,11 +27,11 @@
            <td>{{$cliente->nombre}}</td>
            <td>{{$cliente->apellido}}</td>
            <td>{{$cliente->direccion}}</td>
+           <td><input type="button" id="{{$cliente->id}}" value="Editar" onclick="editarCliente(this.id);"></td>
         </tr>
         @endforeach
         </tbody>
     </table>
-
     {!! $clientes->render() !!}
 
 @endsection
