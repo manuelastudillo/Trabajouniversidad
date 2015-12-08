@@ -2,8 +2,13 @@
 
 @section('content')
 
-       <h1> personal registrados </h1>
-
+       <h1> Productos </h1>
+       <div class"panel-body">
+        
+            <tr>   
+             {!!link_to_route('registroproducto.create', $title='Crear Producto', $attributes =['class'=>'btn btn-primary'])!!}
+  
+          </tr>
      <table class="table table-bordered table-striped">
 
  <thead>
@@ -23,7 +28,7 @@
         <th>Precio Venta</th>
         <th>Descuento</th>
         <th>Proveedor ID</th>
-       <th></th>
+        <th>Acciones</th>
      </tr>
   </thead>
   <tbody>
@@ -45,14 +50,18 @@
                 <td>{{$producto->precio_venta}}</td>
                 <td>{{$producto->descuento}}</td>
                 <td>{{$producto->proveedor_id}}</td>
-                <td><input type="button" id="{{$producto->id}}" value="Editar" onclick="editarProducto(this.id);"></td>
+                <td>
+                {!!link_to_route('registroproducto.edit', $title='Editar', $parameters = $producto->id, $attributes =['class'=>'btn btn-primary'])!!}
           </tr>
            @endforeach
             </tbody>
 
      </table>
 
+
     {!! $productos->render() !!}
 
 
   @endsection
+
+  

@@ -1,161 +1,79 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<html lang="es">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>CRUD Template</title>
+    <title>@section('title')trabajo @show</title>
 
-    <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+     {!! Html::style('bower_components/bootstrap/dist/css/bootstrap.min.css')!!}
+     {!! Html::style('bower_components/bootstrap-material-design/dist/css/material.min.css')!!}
+     {!! Html::style('bower_components/bootstrap-material-design/dist/css/ripples.min.css')!!}
+     {!! Html::style('bower_components/bootstrap-material-design/dist/css/material-fullpalette.min.css') !!}
+     {!! Html::style('bower_components/bootstrap-material-design/dist/css/roboto.min.css') !!}
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- Fonts -->
+    <link href='//fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-  </head>
-  <body>
-  <p><br/></p>
-    <div class="container">
-            <!-- Nav tabs -->
-        <ul class="nav nav-tabs" role="tablist">
-            <li class="active"><a href="#daftar" role="tab" data-toggle="tab">Daftar</a></li>
-            <li><a href="#tambah" role="tab" data-toggle="tab">Tambah</a></li>
-        </ul>
+</head>
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle Navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Farmacia Herrera</a>
+            </div>
 
-        <!-- Tab panes -->
-        <div class="tab-content">
-            <div class="tab-pane active" id="daftar">
-                <br/>
-                <p><button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span> Tambah Data</button></p>
-                <br/>
-                <div class="table-responsive">
-                    <table class="table table-hover">
-                            <thead>
-                                <tr>
-                                    <th>ID</th>
-                                    <th>Nama</th>
-                                    <th>Jenis Kelamin</th>
-                                    <th>Tanggal Lahir</th>
-                                    <th>Alamat</th>
-                                    <th>Aksi</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>0998877</td>
-                                    <td>T Ghazali</td>
-                                    <td>Laki-laki</td>
-                                    <td>1992-11-12</td>
-                                    <td>Pidie, Aceh, Indonesia</td>
-                                    <td>
-                                        <a href=""><span class="glyphicon glyphicon-edit"></span> Ubah</a>
-                                        <a href=""><span class="glyphicon glyphicon-trash"></span> Hapus</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>0998877</td>
-                                    <td>T Ghazali</td>
-                                    <td>Laki-laki</td>
-                                    <td>1992-11-12</td>
-                                    <td>Pidie, Aceh, Indonesia</td>
-                                    <td>
-                                        <a href=""><span class="glyphicon glyphicon-edit"></span> Ubah</a>
-                                        <a href=""><span class="glyphicon glyphicon-trash"></span> Hapus</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>0998877</td>
-                                    <td>T Ghazali</td>
-                                    <td>Laki-laki</td>
-                                    <td>1992-11-12</td>
-                                    <td>Pidie, Aceh, Indonesia</td>
-                                    <td>
-                                        <a href=""><span class="glyphicon glyphicon-edit"></span> Ubah</a>
-                                        <a href=""><span class="glyphicon glyphicon-trash"></span> Hapus</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>0998877</td>
-                                    <td>T Ghazali</td>
-                                    <td>Laki-laki</td>
-                                    <td>1992-11-12</td>
-                                    <td>Pidie, Aceh, Indonesia</td>
-                                    <td>
-                                        <a href=""><span class="glyphicon glyphicon-edit"></span> Ubah</a>
-                                        <a href=""><span class="glyphicon glyphicon-trash"></span> Hapus</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>0998877</td>
-                                    <td>T Ghazali</td>
-                                    <td>Laki-laki</td>
-                                    <td>1992-11-12</td>
-                                    <td>Pidie, Aceh, Indonesia</td>
-                                    <td>
-                                        <a href=""><span class="glyphicon glyphicon-edit"></span> Ubah</a>
-                                        <a href=""><span class="glyphicon glyphicon-trash"></span> Hapus</a>
-                                    </td>
-                                </tr>
-                            </tbody>
-                    </table>
-                </div>
-                <ul class="pagination">
-                    <li class="disabled"><a href="#">&laquo;</a></li>
-                    <li class="active"><a href="#">1</a></li>
-                    <li><a href="#">2</a></li>
-                    <li><a href="#">3</a></li>
-                    <li><a href="#">4</a></li>
-                    <li><a href="#">5</a></li>
-                    <li><a href="#">&raquo;</a></li>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a href="{!!url('registroproveedor')!!}">Proveedor</a></li>
+                    <li><a href="{!!url('registrocliente')!!}">Cliente</a></li>
+                    <li><a href="{!!url('registropersonal')!!}">Personal</a></li>
+                    <li><a href="{!!url('registroproducto')!!}">Producto</a></li>
+
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right">
+                    @if (Auth::guest())
+
+                        <li><a href="{!! url('auth/login')!!}">Sesión</a></li>
+
+                    @else
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{{ Auth::user()->name }} <span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="{!! url ('auth/logout')!!}">Cerrar Sesion</a></li>
+                            </ul>
+                        </li>
+                    @endif
                 </ul>
             </div>
-            <div class="tab-pane" id="tambah">
-                <br/>
-                <div class="alert alert-success" role="alert">Berhasil <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button></div>
-                <div class="alert alert-warning" role="alert">Ada sedikit masalah <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button></div>
-                <div class="alert alert-danger" role="alert">Error, coba lagi <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button></div>
-                <br/>
-                <form role="form">
-                    <div class="form-group">
-                            <label for="exampleInputEmail1">Email address</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
-                    </div>
-                    <div class="form-group">
-                            <label for="exampleInputPassword1">Password</label>
-                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-                    </div>
-                    <div class="form-group">
-                            <label for="exampleInputtxt1">Text</label>
-                            <input type="text" class="form-control" id="exampleInputtxt1" placeholder="Text">
-                    </div>
-                    <div class="form-group">
-                            <label for="exampleInputurl1">Site</label>
-                            <input type="url" class="form-control" id="exampleInputurl1" placeholder="http://">
-                    </div>
-                    <div class="form-group">
-                            <label for="exampleInputFile">File input</label>
-                            <input type="file" id="exampleInputFile">
-                            <p class="help-block">Example block-level help text here.</p>
-                    </div>
-                    <div class="checkbox">
-                            <label>
-                            <input type="checkbox"> Check me out
-                            </label>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                    <button type="button" class="btn btn-success">Back</button>
-                </form>
-                <br/>
-            </div>
         </div>
+    </nav>
+    <div class="container">
+        @yield('content')
     </div>
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="js/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
-  </body>
+    {!! Html::script('bower_components/jquery/dist/jquery.min.js') !!}  
+    {!! Html::script('bower_components/bootstrap/dist/js/bootstrap.min.js') !!} 
+    {!! Html::script('bower_components/bootstrap-material-design/dist/js/ripples.min.js') !!}   
+    {!! Html::script('bower_components/bootstrap-material-design/dist/js/material.min.js') !!}  
+    
+    <script type="text/javascript">
+        $(document).on('ready', function(){
+            $.material.init();
+        });
+    </script>
+</body>
 </html>

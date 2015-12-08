@@ -3,6 +3,8 @@
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Proveedor;
+use Session;
+use Redirect;
 use Illuminate\Http\Request;
 use App\Http\Requests\CreateProveedorRequest;
 
@@ -75,7 +77,8 @@ class RegistroProveedorController extends Controller {
 	 */
 	public function edit($id)
 	{
-		//
+		$proveedor= Proveedor::findOrFail($id);
+		return view('registroproveedor.edit',compact('proveedor'));
 	}
 
 	/**
@@ -84,10 +87,14 @@ class RegistroProveedorController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function update($id)
-	{
-		//
-	}
+	public function update($id,CreateProveedorRequest $request)
+  {
+        $proveedor = Proveedor::find($id);
+        $proveedor->fill($request->all());
+        $proveedor->save();
+        Session::flash('message','Usuario Actualizado Correctamente');
+        return redirect()->route('registroproveedor.index');
+    }
 
 	/**
 	 * Remove the specified resource from storage.
@@ -97,7 +104,10 @@ class RegistroProveedorController extends Controller {
 	 */
 	public function destroy($id)
 	{
-		//
+		Proveedor::destroy($id);
+        Session::flash('message','Usuario Actualizado Correctamente');
+        return redirect()->route('registroproveedor.index');
 	}
+
 
 }

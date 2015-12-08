@@ -3,7 +3,12 @@
 @section('content')
 
        <h1> proveedors registrados </h1>
-
+       <div class"panel-body">
+        
+            <tr>   
+             {!!link_to_route('registroproveedor.create', $title='Crear Proveedor', $attributes =['class'=>'btn btn-primary'])!!}
+  
+          </tr>
      <table class="table table-bordered table-striped">
 
  <thead>
@@ -17,7 +22,7 @@
         <th>Telefono</th>
         <th>Sitio Web</th>
         <th>Email</th>
-       <th></th>
+        <th>Acciones</th>
      </tr>
   </thead>
   <tbody>
@@ -33,7 +38,8 @@
                 <td>{{$proveedor->telefono}}</td>
                 <td>{{$proveedor->web}}</td>
                 <td>{{$proveedor->email}}</td>
-                <td><input type="button" id="{{$proveedor->id}}" value="Editar" onclick="editarProveedor(this.id);"></td>
+                <td>
+                {!!link_to_route('registroproveedor.edit', $title='Editar', $parameters = $proveedor->id, $attributes =['class'=>'btn btn-primary'])!!}
           </tr>
            @endforeach
             </tbody>

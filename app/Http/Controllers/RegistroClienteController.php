@@ -4,6 +4,8 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Cliente;
 use Illuminate\Http\Request;
+use Session;
+use Redirect;
 use DB;
 use App\Http\Requests\CreateClienteRequest;
 class RegistroClienteController extends Controller {
@@ -59,7 +61,7 @@ class RegistroClienteController extends Controller {
 		//$dato=$request->only()
 		//$personal = Personal::create($request->all());
 		$cliente->save();
-		dd("creado");
+		return redirect()->route('registropersonal.index');
 
 	}
 
@@ -82,7 +84,9 @@ class RegistroClienteController extends Controller {
 	 */
 	public function edit($id)
 	{
-		//
+		$cliente = Cliente::find($id);
+
+		return view('registrocliente.edit',compact('cliente'));
 	}
 
 	/**
@@ -91,10 +95,14 @@ class RegistroClienteController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function update($id)
-	{
-		//
-	}
+	public function update($id,CreateClienteRequest $request)
+   {
+        $cliente = Cliente::find($id);
+        $cliente->fill($request->all());
+        $cliente->save();
+        Session::flash('message','Cliente Actualizado Correctamente');
+        return redirect()->route('registrocliente.index');
+    }
 
 	/**
 	 * Remove the specified resource from storage.
@@ -104,7 +112,9 @@ class RegistroClienteController extends Controller {
 	 */
 	public function destroy($id)
 	{
-		//
+		Cliente::destroy($id);
+       Session::flash('message','Usuario Actualizado Correctamente');
+        return redirect()->route('registrocliente.index');
 	}
 
 }

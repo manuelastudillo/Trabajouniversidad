@@ -20,7 +20,7 @@ Route::controllers([
 	'password' => 'Auth\PasswordController',
 ]);
 
-Route::get('/vista-inicio', ['as' => 'vista.inicio', 'uses' => 'NombreControler@index']);
+
 
 resource('ingreso','IngresoController');
 resource('registrocliente','RegistroClienteController');

@@ -3,6 +3,8 @@
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Personal;
+use Session;
+use Redirect;
 use Illuminate\Http\Request;
 use App\Http\Requests\CreatePersonalRequest;
 class RegistroPersonalController extends Controller {
@@ -57,8 +59,7 @@ class RegistroPersonalController extends Controller {
 		//$dato=$request->only()
 		//$personal = Personal::create($request->all());
 		$personal->save();
-		dd("creado");
-
+	return redirect()->route('registropersonal.index');
 	}
 
 	/**
@@ -80,7 +81,9 @@ class RegistroPersonalController extends Controller {
 	 */
 	public function edit($id)
 	{
-		//
+		$personal = Personal::find($id);
+
+		return view('registropersonal.edit',['personal'=>$personal]);
 	}
 
 	/**
@@ -89,10 +92,14 @@ class RegistroPersonalController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function update($id)
-	{
-		//
-	}
+	public function update($id,CreatePersonalRequest $request)
+   {
+        $personal = Personal::find($id);
+        $personal->fill($request->all());
+        $personal->save();
+        Session::flash('message','Usuario Actualizado Correctamente');
+        return redirect()->route('registropersonal.index');
+    }
 
 	/**
 	 * Remove the specified resource from storage.
@@ -102,7 +109,9 @@ class RegistroPersonalController extends Controller {
 	 */
 	public function destroy($id)
 	{
-		//
+		Personal::destroy($id);
+       Session::flash('message','Usuario Actualizado Correctamente');
+        return redirect()->route('registropersonal.index');
 	}
 
 }

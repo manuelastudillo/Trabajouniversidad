@@ -3,8 +3,14 @@
 @section('content')
 
   <h1> Clientes Registrados </h1>
+       <div class"panel-body">
+        
+            <tr>   
+             {!!link_to_route('registrocliente.create', $title='Crear Cliente', $attributes =['class'=>'btn btn-primary'])!!}
+  
+          </tr>
+     <table class="table table-bordered table-striped">
 
-  <table class="table table-bordered table-striped">
 
  <thead>
      <tr>
@@ -14,6 +20,7 @@
        <th>Nombre</th>
        <th>Apellido</th>
        <th>Direccion</th>
+       <th>Acciones</th>
        <th></th>
      </tr>
   </thead>
@@ -27,8 +34,9 @@
            <td>{{$cliente->nombre}}</td>
            <td>{{$cliente->apellido}}</td>
            <td>{{$cliente->direccion}}</td>
-           <td><input type="button" id="{{$cliente->id}}" value="Editar" onclick="editarCliente(this.id);"></td>
-        </tr>
+                <td>
+                {!!link_to_route('registrocliente.edit', $title='Editar', $parameters = $cliente->id, $attributes =['class'=>'btn btn-primary'])!!}
+          </tr>
         @endforeach
         </tbody>
     </table>
