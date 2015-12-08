@@ -8,6 +8,7 @@ class Producto extends Model {
 
 			public $timestamps = false;
 
-	protected $filable=["nombre","principio_activo","laboratorio","linea","codigo_barras","categoria","comision","stock","stockminimo","precio_compra","precio_venta","descuento"];
+	protected $fillable=["nombre","principio_activo","laboratorio","linea","codigo_barras","categoria","comision","stock","stockminimo","precio_compra","precio_venta","descuento","proveedor_id"];
+    protected $hidden = ['created_at', 'updated_at'];
 
 }

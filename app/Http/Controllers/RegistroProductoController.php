@@ -60,7 +60,7 @@ class RegistroProductoController extends Controller {
 		//$dato=$request->only()
 		//$personal = Personal::create($request->all());
 	 	$producto->save();
-		return redirect()->route('registroproveedor.index');
+		return redirect()->route('registroproducto.index');
 	}
 
 	/**
@@ -84,7 +84,7 @@ class RegistroProductoController extends Controller {
 	{
 		$producto = Producto::find($id);
 
-		return view('registroproveedor.edit',['proveedor'=>$proveedor]);
+		return view('registroproducto.edit',['producto'=>$producto]);
 	}
 
 	/**

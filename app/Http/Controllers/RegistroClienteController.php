@@ -61,7 +61,7 @@ class RegistroClienteController extends Controller {
 		//$dato=$request->only()
 		//$personal = Personal::create($request->all());
 		$cliente->save();
-		return redirect()->route('registropersonal.index');
+		return redirect()->route('registrocliente.index');
 
 	}
 

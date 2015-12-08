@@ -9,5 +9,6 @@ class Cliente extends Model {
 
 	public $timestamps = false;
 
-	protected $filable=["rut","nombre","apellido,direccion"];
+ 	protected $fillable=["rut","nombre","apellido","direcion"];
+    protected $hidden = ['created_at', 'updated_at'];
 }

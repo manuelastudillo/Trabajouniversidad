@@ -54,8 +54,7 @@ class RegistroProveedorController extends Controller {
 		//$dato=$request->only()
 		//$personal = Personal::create($request->all());
 	 	$proveedor->save();
-		dd("creado");
-
+         return redirect()->route('registroproveedor.index');
 	}
 
 	/**

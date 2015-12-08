@@ -11,9 +11,9 @@ class Personal extends Model {
 
 	public $timestamps = false;
 
-	protected $filable=["rut","nombre","apellido","sexo","estado_civil","fecha_nacimiento","usuario_mail","password","sueldo","telefono","direcion","cargo"];
+	protected $fillable=["rut","nombre","apellido","sexo","estado_civil","fecha_nacimiento","usuario_mail","password","sueldo","telefono","direcion","cargo"];
 
-	protected $hidden= ['password','remember_token'];
+	protected $hidden= ['password','remember_token','created_at', 'updated_at'];
 
 	public function setPasswordAttribute($valor){
           if(!empty($valor)){

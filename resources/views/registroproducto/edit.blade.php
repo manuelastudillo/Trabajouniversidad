@@ -4,7 +4,7 @@
 
   <h1>Registrar Producto</h1>
 
-    {!!Form::model($producto,['route'=>['registroproducto.update',$producto->id]])!!}
+      {!!Form::model($producto,['route'=>['registroproducto.update',$producto->id],'method'=>'PUT'])!!}
 
     @include('registroproducto.partials.form')
    

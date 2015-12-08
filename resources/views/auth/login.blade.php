@@ -5,14 +5,13 @@
 	<div class="row">
 		<div class="col-md-8 col-md-offset-2">
 			<div class="panel panel-default">
-				<div class="panel-heading">Iniciar Sesión</div>
+				<div class="panel-heading">Iniciar sesión</div>
 				<div class="panel-body">
 					@if (count($errors) > 0)
-					    <div class="alert alert-danger text-center">
-						No coinciden contraseña con usuario
+						<div class="alert alert-danger text-center">
+							Las credenciales que ingresaste no coinciden con nuestros registros.
 						</div>
 					@endif
-
 
 					{!! Form::open(['url' => 'auth/login', 'role' => 'form', 'class' => 'form-horizontal']) !!}
 
@@ -26,12 +25,9 @@
 						</div>
 
 						<div class="form-group">
-						{!! Form::label('password','Password:',['class'=>'col-md-4 control-label'])!!}
-							
+							{!! Form::label('password', 'Password:', ['class' => 'col-md-4 control-label']) !!}
 							<div class="col-md-6">
-							{!!Form::password('password',['class'=> 'form-control'])!!}
-							
-							
+								{!! Form::password('password', ['class' => 'form-control']) !!}
 							</div>
 						</div>
 
@@ -39,7 +35,7 @@
 							<div class="col-md-6 col-md-offset-4">
 								<div class="checkbox">
 									<label>
-										<input type="checkbox" name="remember"> Recúerdame
+										<input type="checkbox" name="remember"> Recuérdame
 									</label>
 								</div>
 							</div>
@@ -51,10 +47,10 @@
 									Entrar
 								</button>
 
-								<a href="{!! url('password/email')!!}">¿Olvidaste tu password?</a>
+								<a href="{!! url('password/email') !!}">¿Olvidaste tu password?</a>
 							</div>
 						</div>
-					{!!Form::close()!!}
+					{!! Form::close() !!}
 				</div>
 			</div>
 		</div>

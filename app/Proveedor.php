@@ -8,6 +8,8 @@ class Proveedor extends Model {
 
 	public $timestamps = false;
 
-	protected $filable=["nombre","representante","rut","direccion","telefono","web","email"];
+	protected $fillable=["nombre","representante","rut","direccion","telefono","web","email"];
+	protected $hidden = ['created_at', 'updated_at'];
+
 
 }
